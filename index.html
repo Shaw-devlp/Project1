@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Resource & Event Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <!-- image: campus logo here -->
+        <h2>Campus Portal</h2>
+      </div>
+      <nav class="menu">
+        <button data-page="home" class="active">🏠 Home</button>
+        <button data-page="profile">👤 Profile</button>
+        <button data-page="clubs">🏛️ Clubs</button>
+        <button data-page="settings">⚙️ Settings</button>
+        <button data-page="labs">🧪 Labs</button>
+        <button data-page="library">📚 Library</button>
+        <button data-page="events">🎉 Events</button>
+      </nav>
+    </aside>
+
+    <!-- Main Content Pages -->
+    <main class="content">
+
+         <!-- HOME PAGE -->
+         <section id="home" class="page active">
+         <div class="home-banner">
+          <img src="C:\Users\Shaw\Desktop\images\maxresdefault.jpg" alt="Campus Banner">
+         </div>
+          <div class="search-area">
+          <input type="text" placeholder= "🔎Search any page" class="search-input" id="dashboardSearch"/>
+         </div>
+
+         <section class="campus-info">
+          <h2>About the website</h2>
+          <p>
+            Welcome new students! Here you'll find everything you need to start college life —
+            events, club activities, library timings, labs, and campus resources. Navigate using
+            the sidebar on the left and explore.
+            
+            Search the page you require the info about in the search bar above, or click the relevant section from the sidebar to access detailed information.
+            
+          </p>
+         </section>
+
+         <section class="campus-info" style="margin-top: 30px;">
+          <h2>About NIT Silchar</h2>
+          <p>
+            National Institute of Technology Silchar (NIT Silchar) is one of the premier technical institutes in India.
+            Established in 1967, it offers undergraduate, postgraduate, and doctoral programs in engineering, science,
+            and management disciplines. The campus is known for its lush greenery, advanced laboratories, vibrant
+            student clubs, and numerous workshops and events throughout the year. NIT Silchar encourages innovation,
+            research, and holistic development for its students. Feel free to contact the administration for any assistance!!!!
+          </p>
+
+          <!-- Library Help / Contact Info -->
+<div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+  <p><strong>Helpline Number:</strong> +91-1234567890</p>
+  <p><strong>Email:</strong> Admin@nits
+</div>
+
+          </section>
+          </section>
+
+          <!-- PROFILE PAGE -->
+  
+         <section id="events" class="page">
+         <div class="top-image">
+         <img src="C:\Users\Shaw\Desktop\images\Culture-Fest-Image-1-1024x576-1.webp" alt="Campus Banner">
+         </div>
+         <button id="closeFormBtn" class="close-btn">X</button>
+         <button class="update-btn">UPDATE</button>
+         <div class="events-header">
+         <h2>Campus Events</h2>
+         <p>Check out upcoming and live events!!!</p>
+         </div>
+         <div id="eventFeed"></div>
+         <!-- Sorting Filter -->
+<div class="sort-container">
+  <select id="sortEvents">
+    <option value="">Sort Events By</option>
+    <option value="alpha">Title (A → Z)</option>
+    <option value="date">Date (Nearest First)</option>
+       </select>
+        </div>
+         </section>
+
+         <section class="event-form" id="eventForm">
+          <h2>Post Update</h2>
+         <input type="text" placeholder="Title" id="eventName" />
+         <textarea placeholder="Details" id="eventAbout"></textarea>
+         <input type="date" id="eventDate" />
+          <input type="text" placeholder="Related Club/Page" id="eventClub" />
+         <button id="submitEvent">Submit</button>
+         </section>
+
+
+         <section id="settings" class="page">
+  <!-- Top image -->
+  <div class="settings-image">
+    <img src="C:\Users\Shaw\Desktop\images\settings-process-icon-isolated-on-260nw-1407699146.webp" alt="Settings Banner">
+  </div>
+
+  <h2 class="settings-title">Settings</h2>
+
+  <div class="settings-grid">
+    <div class="settings-card">
+      <h3>Profile Settings</h3>
+      <p>Edit your personal information and change account details.</p>
+    </div>
+
+    <div class="settings-card">
+      <h3>Privacy & Security</h3>
+      <p>Manage login activity, password, and app permissions.</p>
+    </div>
+
+    <div class="settings-card">
+      <h3>Notification Preferences</h3>
+      <p>Choose which alerts you receive from campus updates and clubs.</p>
+    </div>
+
+    <div class="settings-card">
+      <h3>Theme & Display</h3>
+      <p>Customize the interface, font size, and color accents.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="profile" class="page">
+  <!-- Top image -->  
+
+<h2 class="profile-title">
+  <img src="C:\Users\Shaw\Desktop\images\download.jpeg" alt="Profile Logo" class="profile-inline-logo">
+  Profile
+</h2>
+
+  <div class="profile-container">
+    <div class="profile-grid">
+      <div class="profile-card">
+        <h3>Personal Info</h3>
+        <p>Your name, age, contact info, and student ID.</p>
+      </div>
+
+      <div class="profile-card">
+        <h3>Academic Overview</h3>
+        <p>Course enrolled, semester, and GPA details.</p>
+      </div>
+
+      <div class="profile-card">
+        <h3>Clubs & Activities</h3>
+        <p>View the clubs you are part of and events joined.</p>
+      </div>
+
+      <div class="profile-card">
+        <h3>Timetable</h3>
+        <p>Check your daily classes, labs, and workshops schedule.</p>
+      </div>
+    </div>
+
+    <!-- Right-side vertical blocks (2 blocks) -->
+    <div class="profile-right">
+      <div class="profile-card">
+        <h3>Announcements</h3>
+        <p>Important campus notifications for freshmen.</p>
+      </div>
+
+      <div class="profile-card">
+        <h3>AI / LLM Placeholder</h3>
+        <p>Future AI assistant for academic help and queries.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="clubs" class="page">
+  <div class="clubs-banner">
+    <img src="C:\Users\Shaw\Desktop\images\pngtree-university-club-recruiting-new-poster-image_169637.jpg" alt="Campus Clubs Banner">
+  </div>
+
+  <h2 class="clubs-title">Clubs</h2>
+
+  <div class="club-card">
+    <img src="C:\Users\Shaw\Pictures\Screenshots\Screenshot 2025-11-04 191954.png" alt="NERDS Club">
+    <div>
+      <h3>NERDS Club</h3>
+      <p>Community for curious minds. Hosts quizzes, open discussions, geek events, hackathons.</p>
+      <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="club-card">
+    <img src="C:\Users\Shaw\Desktop\images\ML.png" alt="AI & ML Club">
+    <div>
+      <h3>AI & ML Club</h3>
+      <p>Workshops, research circles, ML competitions, and model development for real use cases.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="club-card">
+    <img src="C:\Users\Shaw\Desktop\images\Coding clubs.png" alt="Coding Club">
+    <div>
+      <h3>Coding Club</h3>
+      <p>Teaches programming fundamentals, CP, DSA, Hackathons, Project mentorship.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="club-card">
+    <img src="C:\Users\Shaw\Desktop\images\dance.png" alt="Dance Club">
+    <div>
+      <h3>Dance Club</h3>
+      <p>Freestyle, classical, hip-hop. Performs during fests & cultural nights.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="club-card">
+    <img src="C:\Users\Shaw\Desktop\images\football.jpeg" alt="Football Club">
+    <div>
+      <h3>Football Club</h3>
+      <p>Training sessions, tournaments, league events. Builds fitness & tactical mind.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+</section>
+
+
+<section id="labs" class="page">
+  <div class="labs-banner">
+    <img src="C:\Users\Shaw\Desktop\images\lab banner.jpeg" alt="Labs Banner">
+  </div>
+
+  <h2 class="labs-title">Labs</h2>
+
+  <div class="lab-card">
+    <img src="C:\Users\Shaw\Desktop\images\physics lab.jpeg" alt="Physics Lab">
+    <div>
+      <h3>Physics Laboratory</h3>
+      <p>Equipped with optics, mechanics, and electronics setups for practical experiments.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="lab-card">
+    <img src="C:\Users\Shaw\Desktop\images\chem lab.jpeg" alt="Chemistry Lab">
+    <div>
+      <h3>Chemistry Laboratory</h3>
+      <p>Modern lab for organic, inorganic, and physical chemistry experiments.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="lab-card">
+    <img src="C:\Users\Shaw\Desktop\images\electronics.jpeg" alt="Electrical Lab">
+    <div>
+      <h3>Electrical & Electronics Lab</h3>
+      <p>Hands-on experiments with circuits, microcontrollers, and power systems.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="lab-card">
+    <img src="C:\Users\Shaw\Desktop\images\cs lab.jpeg" alt="Computer Lab">
+    <div>
+      <h3>Computer Science Lab</h3>
+      <p>High-performance machines for programming, simulations, and networking labs.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="lab-card">
+    <img src="C:\Users\Shaw\Desktop\images\mech lab.jpeg" alt="Mechanical Lab">
+    <div>
+      <h3>Mechanical Workshop Lab</h3>
+      <p>Workshop for machining, fabrication, and CAD/CAM practical sessions.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+
+  <div class="lab-card">
+    <img src="C:\Users\Shaw\Desktop\images\bio lab.jpeg"" alt="Biotech Lab">
+    <div>
+      <h3>Biotechnology Lab</h3>
+      <p>Facilities for molecular biology, genetics, and bioinformatics experiments.</p>
+            <div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+      <p><strong>Contact Number:</strong> +91-1234567890</p>
+       <p><strong>Email:</strong> Admin@nits
+</div>
+    </div>
+  </div>
+</section>
+
+<section id="library" class="page">
+  <!-- Library Banner -->
+  <div class="library-banner">
+    <img src="C:\Users\Shaw\Desktop\images\libraryu banner.jpg" alt="NITS Library Banner">
+  </div>
+
+  <!-- Library Heading -->
+  <h2 class="library-title">NITS LIBRARY</h2>
+
+  <!-- Intro Section -->
+  <div class="library-intro">
+    <p>
+      Welcome to the NITS Library! Our library houses thousands of books across multiple disciplines including Engineering, Science, Technology, Management, and Humanities. It offers a quiet study environment, digital resources, and a rich collection of research papers.
+    </p>
+    <img src="C:\Users\Shaw\Desktop\images\library ntro.jpeg" alt="Library Image">
+  </div>
+
+  <!-- Ground Floor -->
+  <div class="library-floor">
+    <div class="floor-image">
+      <img src="C:\Users\Shaw\Desktop\images\library growund.jpeg" alt="Ground Floor">
+    </div>
+    <div class="floor-text">
+      <h3>Ground Floor</h3>
+      <p>
+        The ground floor hosts General Reference books, Engineering Textbooks, and a Computer Lab. Sections are organized alphabetically by subject for easy access. Comfortable reading areas are available near the windows.
+      </p>
+    </div>
+  </div>
+
+  <!-- First Floor -->
+  <div class="library-floor reverse">
+    <div class="floor-image">
+      <img src="C:\Users\Shaw\Desktop\images\library floor 1.jpeg"alt="First Floor">
+    </div>
+    <div class="floor-text">
+      <h3>First Floor</h3>
+      <p>
+        The first floor contains Management, Humanities, and Social Sciences sections. There are private study cubicles, journal archives, and multimedia resources for student projects and research.
+      </p>
+    </div>
+  </div>
+
+  <!-- Second Floor -->
+  <div class="library-floor">
+    <div class="floor-image">
+      <img src="C:\Users\Shaw\Desktop\images\library floor2.jpeg" alt="Second Floor">
+    </div>
+    <div class="floor-text">
+      <h3>Second Floor</h3>
+      <p>
+        The second floor hosts Science & Technology books, Research papers, and Thesis archives. Collaborative study rooms and discussion zones are available for group learning.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Library Help / Contact Info -->
+<div class="library-contact" style="margin-top: 40px; padding: 15px; border-top: 2px solid #1a57d8;">
+  <p><strong>Helpline Number:</strong> +91-1234567890</p>
+  <p><strong>Email:</strong> library@nits.ac.in</p>
+</div>
+
+</section>
+
+<!-- Library Help / Contact Info -->
+
+
+
+    </main>
+  </div>
+</body>
+</html>
