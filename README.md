@@ -19,6 +19,7 @@ Languages used:
 2. CSS
  3.  JAVA SCRIPT
 
+WEBSITE LINK: https://shaw-devlp.github.io/Project1/
 
 Please look at all the features and options while operqating website to know its full potential
 ----
